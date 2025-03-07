@@ -6,7 +6,6 @@
   <title>Ronaldo Agro Negócio - Soluções Agrícolas Completas</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <style>
     /* Reset e estilos gerais */
     * {
@@ -62,8 +61,7 @@
       margin-left: auto;
       margin-right: auto;
     }
-    
-    /* Botões com efeito de onda */
+    /* Botões */
     .btn {
       display: inline-block;
       padding: 14px 28px;
@@ -78,32 +76,6 @@
       position: relative;
       overflow: hidden;
       z-index: 1;
-    }
-    .btn:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 30px;
-      z-index: -2;
-    }
-    .btn:before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.15);
-      transition: all 0.5s;
-      border-radius: 30px;
-      z-index: -1;
-    }
-    .btn:hover:before {
-      width: 100%;
     }
     .btn-primary {
       background-color: #4caf50;
@@ -143,8 +115,7 @@
       padding: 16px 32px;
       font-size: 18px;
     }
-    
-    /* Header e Navegação com menu mobile melhorado */
+    /* Header e Navegação */
     header {
       background-color: white;
       padding: 15px 0;
@@ -163,7 +134,6 @@
       font-size: 24px;
       font-weight: 700;
       color: #2c4f30;
-      z-index: 1001;
     }
     .logo span {
       color: #4caf50;
@@ -206,125 +176,20 @@
       font-size: 24px;
       cursor: pointer;
       color: #333;
-      z-index: 1001;
     }
-    
-    /* Menu mobile deslizante */
-    .mobile-nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 80%;
-      max-width: 320px;
-      height: 100%;
-      background-color: white;
-      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-      transition: right 0.3s ease;
-      z-index: 1000;
-      padding: 100px 40px 40px;
-      display: flex;
-      flex-direction: column;
-      overflow-y: auto;
-    }
-    .mobile-nav.active {
-      right: 0;
-    }
-    .mobile-nav ul {
-      list-style: none;
-    }
-    .mobile-nav ul li {
-      margin-bottom: 20px;
-    }
-    .mobile-nav ul li a {
-      color: #333;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 18px;
-      transition: color 0.3s;
-      display: block;
-      padding: 10px 0;
-    }
-    .mobile-nav ul li a:hover {
-      color: #4caf50;
-    }
-    .mobile-nav-footer {
-      margin-top: auto;
-      padding-top: 30px;
-      border-top: 1px solid #eee;
-    }
-    .mobile-social {
-      display: flex;
-      gap: 15px;
-      margin-top: 20px;
-    }
-    .mobile-social a {
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #f5f5f5;
-      border-radius: 50%;
-      color: #333;
-      font-size: 16px;
-      transition: all 0.3s ease;
-    }
-    .mobile-social a:hover {
-      background-color: #4caf50;
-      color: white;
-    }
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0, 0, 0, 0.7);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 999;
-    }
-    .overlay.active {
-      opacity: 1;
-      visibility: visible;
-    }
-    
-    /* Banner Principal com efeito paralax melhorado */
+    /* Banner Principal */
     .hero {
       padding-top: 150px;
       padding-bottom: 80px;
       background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.85)), url('https://images.unsplash.com/photo-1595514535215-8a3ff2891343?q=80&w=1800') no-repeat center center;
       background-size: cover;
       background-attachment: fixed;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero:before {
-      content: '';
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      top: -50%;
-      left: -50%;
-      background: url('https://images.unsplash.com/photo-1595514535215-8a3ff2891343?q=80&w=1800') no-repeat center center;
-      background-size: cover;
-      animation: slowMove 30s linear infinite;
-      opacity: 0.05;
-      z-index: 0;
-    }
-    @keyframes slowMove {
-      0% { transform: translateY(0) translateX(0); }
-      50% { transform: translateY(-1%) translateX(-1%); }
-      100% { transform: translateY(0) translateX(0); }
     }
     .hero-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 40px;
-      position: relative;
-      z-index: 1;
     }
     .hero-text {
       flex: 1;
@@ -380,8 +245,7 @@
       font-weight: 500;
       color: #555;
     }
-    
-    /* Benefícios com animação */
+    /* Benefícios */
     .benefits {
       background-color: white;
       padding: 80px 0;
@@ -400,23 +264,6 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       text-align: center;
       border: 1px solid #f0f0f0;
-      position: relative;
-      overflow: hidden;
-    }
-    .benefit-card:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 5px;
-      background: linear-gradient(90deg, #4caf50, #ff7e3d);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.5s;
-    }
-    .benefit-card:hover:before {
-      transform: scaleX(1);
     }
     .benefit-card:hover {
       transform: translateY(-10px);
@@ -430,11 +277,6 @@
       padding: 20px;
       background-color: rgba(76, 175, 80, 0.1);
       border-radius: 50%;
-      transition: all 0.3s ease;
-    }
-    .benefit-card:hover i {
-      background-color: rgba(76, 175, 80, 0.2);
-      transform: rotateY(180deg);
     }
     .benefit-card h3 {
       font-size: 22px;
@@ -459,45 +301,17 @@
     .cta-link:hover {
       color: #3d9140;
       border-color: #3d9140;
-      letter-spacing: 1px;
     }
-    
-    /* Sobre nós com animações */
+    /* Sobre nós */
     .about {
       background-color: #f5f9f5;
       padding: 80px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    .about:after {
-      content: '';
-      position: absolute;
-      bottom: -50px;
-      right: -50px;
-      width: 200px;
-      height: 200px;
-      background-color: rgba(76, 175, 80, 0.05);
-      border-radius: 50%;
-      z-index: 0;
-    }
-    .about:before {
-      content: '';
-      position: absolute;
-      top: -20px;
-      left: -20px;
-      width: 150px;
-      height: 150px;
-      background-color: rgba(76, 175, 80, 0.05);
-      border-radius: 50%;
-      z-index: 0;
     }
     .about-content {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 50px;
-      position: relative;
-      z-index: 1;
     }
     .about-image {
       flex: 1;
@@ -507,10 +321,6 @@
       max-width: 100%;
       border-radius: 15px;
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      transition: all 0.5s ease;
-    }
-    .about-image:hover img {
-      transform: scale(1.03);
     }
     .experience-badge {
       position: absolute;
@@ -523,10 +333,6 @@
       font-size: 20px;
       font-weight: 700;
       box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
-      transition: all 0.3s ease;
-    }
-    .about-image:hover .experience-badge {
-      transform: translateY(-10px) rotate(5deg);
     }
     .about-text {
       flex: 1;
@@ -548,57 +354,20 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      transition: all 0.3s ease;
-    }
-    .feature-item:hover {
-      transform: translateX(5px);
     }
     .feature-item i {
       color: #4caf50;
       font-size: 20px;
     }
-    
-    /* Carrossel de produtos para mobile e desktop */
+    /* Categorias de Produtos */
     .products {
       padding: 80px 0;
       background: white;
-      position: relative;
-      overflow: hidden;
-    }
-    .products-controls {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 30px;
-    }
-    .swiper-button {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: #fff;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      color: #2c4f30;
-    }
-    .swiper-button:hover {
-      background-color: #4caf50;
-      color: white;
-    }
-    .swiper-pagination-bullet {
-      width: 12px;
-      height: 12px;
-      background-color: #4caf50;
-      opacity: 0.5;
-    }
-    .swiper-pagination-bullet-active {
-      opacity: 1;
-      background-color: #4caf50;
     }
     .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
       margin-top: 50px;
     }
     .product-card {
@@ -608,9 +377,6 @@
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       border: 1px solid #f0f0f0;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
     }
     .product-card:hover {
       transform: translateY(-10px);
@@ -619,21 +385,6 @@
     .product-image {
       height: 220px;
       overflow: hidden;
-      position: relative;
-    }
-    .product-image:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 50%;
-      background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
-      opacity: 0;
-      transition: opacity 0.3s;
-    }
-    .product-card:hover .product-image:after {
-      opacity: 1;
     }
     .product-image img {
       width: 100%;
@@ -646,9 +397,6 @@
     }
     .product-info {
       padding: 25px;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
     }
     .product-info h3 {
       font-size: 22px;
@@ -659,7 +407,7 @@
       font-size: 15px;
       margin-bottom: 20px;
       color: #666;
-      flex-grow: 1;
+      min-height: 70px;
     }
     .product-cta {
       display: flex;
@@ -667,27 +415,16 @@
       align-items: center;
       margin-top: 15px;
     }
-    
-    /* Carrossel de depoimentos */
+    /* Depoimentos */
     .testimonials {
       padding: 80px 0;
       background: #f5f9f5;
-      position: relative;
-      overflow: hidden;
     }
-    .testimonials:before {
-      content: '\201C';
-      position: absolute;
-      top: 50px;
-      left: 50px;
-      font-size: 300px;
-      color: rgba(76, 175, 80, 0.05);
-      font-family: Georgia, serif;
-      z-index: 0;
-    }
-    .testimonials-slider {
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
       margin-top: 50px;
-      padding-bottom: 60px;
     }
     .testimonial {
       background: white;
@@ -695,12 +432,6 @@
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
       border: 1px solid #f0f0f0;
-      height: 100%;
-      transition: all 0.3s ease;
-    }
-    .testimonial:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     }
     .testimonial p {
       font-size: 16px;
@@ -718,18 +449,12 @@
       display: flex;
       align-items: center;
     }
-    .testimonial-avatar {
+    .testimonial-author img {
       width: 60px;
       height: 60px;
       border-radius: 50%;
       margin-right: 15px;
-      background-color: #f0f0f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      color: #4caf50;
-      font-weight: bold;
+      object-fit: cover;
       border: 3px solid #4caf50;
     }
     .author-info h4 {
@@ -743,8 +468,7 @@
       font-style: normal;
       color: #777;
     }
-    
-    /* FAQ com animações melhoradas */
+    /* FAQ */
     .faq {
       padding: 80px 0;
       background: white;
@@ -760,10 +484,6 @@
       border: 1px solid #eee;
       border-radius: 10px;
       overflow: hidden;
-      transition: all 0.3s ease;
-    }
-    .accordion-item:hover {
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     }
     .accordion-header {
       padding: 20px;
@@ -786,56 +506,25 @@
       padding: 0 20px;
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.5s ease, padding 0.5s ease;
-      background-color: #fff;
-    }
-    .accordion-item.active {
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      border-color: #4caf50;
+      transition: max-height 0.3s ease, padding 0.3s ease;
     }
     .accordion-item.active .accordion-header {
       background: #f0f7f0;
-      color: #4caf50;
     }
     .accordion-item.active .accordion-header i {
       transform: rotate(180deg);
-      color: #4caf50;
     }
     .accordion-item.active .accordion-content {
       max-height: 1000px;
       padding: 20px;
     }
-    
-    /* CTA com efeito parallax melhorado */
+    /* CTA */
     .cta-section {
-      padding: 100px 0;
+      padding: 80px 0;
       background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1800') no-repeat center center;
       background-size: cover;
       background-attachment: fixed;
       text-align: center;
-      position: relative;
-    }
-    .cta-section .container {
-      position: relative;
-      z-index: 2;
-    }
-    .cta-section:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: url('https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1800') no-repeat center center;
-      background-size: cover;
-      background-attachment: fixed;
-      filter: blur(5px);
-      opacity: 0.1;
-      animation: slowZoom 30s infinite alternate;
-    }
-    @keyframes slowZoom {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.1); }
     }
     .cta-section h2 {
       font-size: 36px;
@@ -856,12 +545,10 @@
       gap: 20px;
       margin-top: 20px;
     }
-    
-    /* Formulário de contato com animações */
+    /* Formulário de contato */
     .contact {
       padding: 80px 0;
       background: #f5f9f5;
-      position: relative;
     }
     .contact-container {
       display: grid;
@@ -890,10 +577,6 @@
       display: flex;
       align-items: center;
       margin-bottom: 15px;
-      transition: all 0.3s ease;
-    }
-    .contact-item:hover {
-      transform: translateX(5px);
     }
     .contact-item i {
       font-size: 20px;
@@ -910,53 +593,15 @@
       padding: 40px;
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      position: relative;
-      z-index: 1;
-      overflow: hidden;
-    }
-    .contact-form:before {
-      content: '';
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      background: linear-gradient(45deg, #4caf50, #ff7e3d);
-      top: -50%;
-      left: -50%;
-      z-index: -1;
-      transform: rotate(45deg);
-      transition: all 0.5s ease;
-      opacity: 0;
-    }
-    .contact-form:hover:before {
-      opacity: 0.03;
     }
     .form-group {
       margin-bottom: 20px;
-      position: relative;
     }
     .form-group label {
       display: block;
       margin-bottom: 5px;
       color: #2c4f30;
       font-weight: 500;
-      transition: all 0.3s ease;
-      position: absolute;
-      top: 12px;
-      left: 15px;
-      pointer-events: none;
-      font-size: 16px;
-    }
-    .form-group input:focus ~ label,
-    .form-group input:valid ~ label,
-    .form-group textarea:focus ~ label,
-    .form-group textarea:valid ~ label,
-    .form-group select:focus ~ label,
-    .form-group select:valid ~ label {
-      top: -10px;
-      left: 10px;
-      font-size: 12px;
-      background-color: white;
-      padding: 0 5px;
     }
     .form-group input,
     .form-group textarea,
@@ -981,8 +626,7 @@
     button[type="submit"] {
       width: 100%;
     }
-    
-    /* Botão WhatsApp com animação */
+    /* Botão WhatsApp */
     .whatsapp-btn {
       position: fixed;
       bottom: 30px;
@@ -999,53 +643,19 @@
       box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
       transition: all 0.3s ease;
     }
-    .whatsapp-btn:before {
-      content: '';
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background-color: #25d366;
-      position: absolute;
-      z-index: -1;
-      transform: scale(1);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.3); opacity: 0.6; }
-      100% { transform: scale(1.6); opacity: 0; }
-    }
     .whatsapp-btn:hover {
-      transform: scale(1.1) rotate(5deg);
+      transform: scale(1.1);
       box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
     }
     .whatsapp-btn i {
       font-size: 30px;
       color: white;
     }
-    
-    /* Rodapé com animações */
+    /* Rodapé */
     footer {
       padding: 60px 0 20px;
       background: #2c4f30;
       color: #fff;
-      position: relative;
-      overflow: hidden;
-    }
-    footer:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 5px;
-      background: linear-gradient(90deg, #4caf50, #ff7e3d, #4caf50);
-      background-size: 200% 100%;
-      animation: gradientMove 5s linear infinite;
-    }
-    @keyframes gradientMove {
-      0% { background-position: 0% 0%; }
-      100% { background-position: 200% 0%; }
     }
     .footer-content {
       display: grid;
@@ -1067,10 +677,6 @@
       width: 50px;
       height: 2px;
       background-color: #4caf50;
-      transition: all 0.3s ease;
-    }
-    .footer-column:hover h3::after {
-      width: 100px;
     }
     .footer-column p {
       margin-bottom: 20px;
@@ -1086,25 +692,12 @@
     .footer-column ul li a {
       color: rgba(255, 255, 255, 0.7);
       text-decoration: none;
-      transition: all 0.3s ease;
+      transition: color 0.3s ease;
       display: inline-block;
-      position: relative;
-      padding-left: 0;
-    }
-    .footer-column ul li a:before {
-      content: '→';
-      position: absolute;
-      left: -20px;
-      opacity: 0;
-      transition: all 0.3s ease;
     }
     .footer-column ul li a:hover {
       color: #fff;
-      padding-left: 20px;
-    }
-    .footer-column ul li a:hover:before {
-      left: 0;
-      opacity: 1;
+      padding-left: 5px;
     }
     .social-links {
       display: flex;
@@ -1124,7 +717,7 @@
     }
     .social-links a:hover {
       background: #4caf50;
-      transform: translateY(-5px) rotate(360deg);
+      transform: translateY(-5px);
     }
     .copyright {
       margin-top: 40px;
@@ -1134,74 +727,6 @@
       padding-top: 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
-    /* Efeito de Scroll Reveal melhorado */
-    .reveal-element {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .reveal-element.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    /* Scroll to top button */
-    .scroll-top {
-      position: fixed;
-      bottom: 30px;
-      left: 30px;
-      width: 50px;
-      height: 50px;
-      background: #4caf50;
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      z-index: 99;
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
-      cursor: pointer;
-    }
-    .scroll-top.active {
-      opacity: 1;
-      visibility: visible;
-    }
-    .scroll-top:hover {
-      background: #3d9140;
-      transform: translateY(-5px);
-    }
-    
-    /* Preloader */
-    .preloader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: white;
-      z-index: 9999;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .preloader-spinner {
-      width: 50px;
-      height: 50px;
-      border: 5px solid #f3f3f3;
-      border-top: 5px solid #4caf50;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
     /* Otimizações Mobile */
     @media (max-width: 992px) {
       .hero-content,
@@ -1212,21 +737,13 @@
         bottom: 10px;
         right: 10px;
       }
-      .benefit-card p,
-      .product-info p {
-        min-height: auto;
-      }
     }
-    
     @media (max-width: 768px) {
       .section-title {
         font-size: 28px;
       }
-      .section-subtitle {
-        font-size: 16px;
-      }
       .hero h1 {
-        font-size: 32px;
+        font-size: 36px;
       }
       .hero p {
         font-size: 16px;
@@ -1237,9 +754,6 @@
       .mobile-menu {
         display: block;
       }
-      .header-cta {
-        display: none;
-      }
       .hero-buttons {
         flex-direction: column;
         gap: 10px;
@@ -1249,70 +763,29 @@
         align-items: flex-start;
         gap: 15px;
       }
-      .hero-image {
-        margin-top: 30px;
-      }
-      .about-features {
-        grid-template-columns: 1fr;
-      }
       .cta-buttons {
         flex-direction: column;
         align-items: center;
         gap: 15px;
       }
-      .swiper-button {
-        width: 40px;
-        height: 40px;
-        font-size: 14px;
-      }
     }
-    
-    @media (max-width: 576px) {
-      .section-padding {
-        padding: 50px 0;
-      }
-      .hero {
-        padding-top: 120px;
-        padding-bottom: 60px;
-      }
+    @media (max-width: 480px) {
       .contact-form, .contact-info {
         padding: 20px;
       }
       .btn {
-        padding: 12px 20px;
-        font-size: 14px;
-        width: 100%;
-      }
-      .btn-large {
-        padding: 14px 24px;
-        font-size: 15px;
+        padding: 12px 24px;
+        font-size: 16px;
       }
       .form-group input,
       .form-group textarea,
       .form-group select {
-        font-size: 15px;
-      }
-      .testimonial {
-        padding: 20px;
-      }
-      .accordion-header {
-        padding: 15px;
-        font-size: 15px;
+        font-size: 16px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Preloader -->
-  <div class="preloader">
-    <div class="preloader-spinner"></div>
-  </div>
-
-  <!-- Botão de scroll para o topo -->
-  <div class="scroll-top">
-    <i class="fas fa-arrow-up"></i>
-  </div>
-
   <!-- Barra de Navegação -->
   <header>
     <div class="container">
@@ -1336,33 +809,11 @@
     </div>
   </header>
 
-  <!-- Menu Mobile -->
-  <div class="mobile-nav">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#benefits">Benefícios</a></li>
-      <li><a href="#products">Produtos</a></li>
-      <li><a href="#about">Sobre Nós</a></li>
-      <li><a href="#testimonials">Depoimentos</a></li>
-      <li><a href="#contact">Contato</a></li>
-    </ul>
-    <div class="mobile-nav-footer">
-      <a href="#contact" class="btn btn-primary" style="width:100%">Solicitar Orçamento</a>
-      <div class="mobile-social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-      </div>
-    </div>
-  </div>
-  <div class="overlay"></div>
-
   <!-- Banner Principal -->
   <section class="hero" id="home">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-text reveal-element">
+        <div class="hero-text">
           <h1>Soluções Agrícolas Completas para Aumentar sua Produtividade</h1>
           <p>Na Ronaldo Agro Negócio, oferecemos os melhores produtos agrícolas e insumos para maximizar seus resultados. Nossa equipe de especialistas está pronta para encontrar as soluções ideais para sua lavoura.</p>
           <div class="hero-buttons">
@@ -1384,8 +835,8 @@
             </div>
           </div>
         </div>
-        <div class="hero-image reveal-element">
-          <img src="https://via.placeholder.com/600x400/f5f5f5/4caf50?text=Ronaldo+Agro" alt="Agricultura de precisão">
+        <div class="hero-image">
+          <img src="ronaldobanner.png" alt="Agricultura de precisão">
         </div>
       </div>
     </div>
@@ -1394,28 +845,28 @@
   <!-- Seção de Benefícios -->
   <section class="benefits" id="benefits">
     <div class="container text-center">
-      <h2 class="section-title reveal-element">Nossos Diferenciais</h2>
-      <p class="section-subtitle reveal-element">Descubra por que milhares de agricultores escolhem a Ronaldo Agro Negócio para suprir suas necessidades agrícolas.</p>
+      <h2 class="section-title">Nossos Diferenciais</h2>
+      <p class="section-subtitle">Descubra por que milhares de agricultores escolhem a Ronaldo Agro Negócio para suprir suas necessidades agrícolas.</p>
       <div class="benefits-grid">
-        <div class="benefit-card reveal-element">
+        <div class="benefit-card">
           <i class="fas fa-certificate"></i>
           <h3>Qualidade Garantida</h3>
           <p>Trabalhamos apenas com produtos certificados e de eficácia comprovada, garantindo resultados superiores na sua lavoura.</p>
           <a href="#products" class="btn btn-primary">Ver Produtos</a>
         </div>
-        <div class="benefit-card reveal-element">
+        <div class="benefit-card">
           <i class="fas fa-headset"></i>
           <h3>Assistência Técnica</h3>
           <p>Nossa equipe de especialistas oferece suporte técnico completo, desde a escolha até a aplicação correta dos produtos.</p>
           <a href="#contact" class="btn btn-primary">Agendar Visita</a>
         </div>
-        <div class="benefit-card reveal-element">
+        <div class="benefit-card">
           <i class="fas fa-truck"></i>
           <h3>Entrega Rápida</h3>
           <p>Entregamos seus produtos com rapidez e eficiência, diretamente onde você estiver, sem atrasos.</p>
           <a href="#" class="btn btn-primary">Áreas Atendidas</a>
         </div>
-        <div class="benefit-card reveal-element">
+        <div class="benefit-card">
           <i class="fas fa-coins"></i>
           <h3>Melhor Custo-Benefício</h3>
           <p>Preços justos e competitivos para aumentar a rentabilidade da sua produção agrícola sem comprometer a qualidade.</p>
@@ -1429,11 +880,11 @@
   <section class="about" id="about">
     <div class="container">
       <div class="about-content">
-        <div class="about-image reveal-element">
-          <img src="https://via.placeholder.com/600x400/f5f5f5/4caf50?text=Sobre+Nós" alt="Ronaldo Agro Negócio">
+        <div class="about-image">
+          <img src="ronaldo1.png" alt="Ronaldo Agro Negócio">
           <div class="experience-badge">25+ Anos de Experiência</div>
         </div>
-        <div class="about-text reveal-element">
+        <div class="about-text">
           <h2 class="section-title">Conheça a Ronaldo Agro Negócio</h2>
           <p>Desde 2008, a Ronaldo Agro Negócio tem sido referência no fornecimento de insumos agrícolas de alta qualidade. Nossa missão é contribuir para o desenvolvimento sustentável do agronegócio brasileiro, oferecendo soluções completas que aumentam a produtividade no campo.</p>
           <p>Com uma equipe altamente qualificada e parceria com as melhores marcas do mercado, garantimos produtos eficientes e o suporte técnico necessário para o sucesso da sua lavoura.</p>
@@ -1461,196 +912,121 @@
     </div>
   </section>
 
-  <!-- Categorias de Produtos (Carrossel) -->
+  <!-- Categorias de Produtos -->
   <section class="products" id="products">
     <div class="container text-center">
-      <h2 class="section-title reveal-element">Nossos Produtos</h2>
-      <p class="section-subtitle reveal-element">Oferecemos uma linha completa de produtos para todas as necessidades da sua lavoura, com as melhores marcas e tecnologias do mercado.</p>
-      <div class="products-grid reveal-element">
-        <div class="swiper-container products-slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="https://via.placeholder.com/400x300/f5f5f5/4caf50?text=Produtos+Agrícolas" alt="Produtos Agrícolas">
-                </div>
-                <div class="product-info">
-                  <h3>Produtos Agrícolas</h3>
-                  <p>Linha completa de soluções para proteger sua lavoura contra pragas e doenças, garantindo o máximo potencial produtivo.</p>
-                  <div class="product-cta">
-                    <a href="#" class="cta-link">Ver detalhes</a>
-                    <a href="#contact" class="btn btn-primary btn-small">Solicitar</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="swiper-slide">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="https://via.placeholder.com/400x300/f5f5f5/4caf50?text=Fertilizantes" alt="Fertilizantes">
-                </div>
-                <div class="product-info">
-                  <h3>Fertilizantes</h3>
-                  <p>Fertilizantes de alta performance para solo e foliar, desenvolvidos para fornecer a nutrição ideal e aumentar significativamente a produtividade.</p>
-                  <div class="product-cta">
-                    <a href="#" class="cta-link">Ver detalhes</a>
-                    <a href="#contact" class="btn btn-primary btn-small">Solicitar</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="swiper-slide">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="https://via.placeholder.com/400x300/f5f5f5/4caf50?text=Sementes" alt="Sementes">
-                </div>
-                <div class="product-info">
-                  <h3>Sementes</h3>
-                  <p>Variedades de alto potencial genético e adaptadas às diferentes regiões e condições climáticas, garantindo o melhor início para sua lavoura.</p>
-                  <div class="product-cta">
-                    <a href="#" class="cta-link">Ver detalhes</a>
-                    <a href="#contact" class="btn btn-primary btn-small">Solicitar</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div class="swiper-slide">
-              <div class="product-card">
-                <div class="product-image">
-                  <img src="https://via.placeholder.com/400x300/f5f5f5/4caf50?text=Equipamentos" alt="Equipamentos">
-                </div>
-                <div class="product-info">
-                  <h3>Equipamentos</h3>
-                  <p>Ferramentas e equipamentos de qualidade para otimizar o trabalho no campo e aumentar a precisão das suas aplicações.</p>
-                  <div class="product-cta">
-                    <a href="#" class="cta-link">Ver detalhes</a>
-                    <a href="#contact" class="btn btn-primary btn-small">Solicitar</a>
-                  </div>
-                </div>
-              </div>
+      <h2 class="section-title">Nossos Produtos</h2>
+      <p class="section-subtitle">Oferecemos uma linha completa de produtos para todas as necessidades da sua lavoura, com as melhores marcas e tecnologias do mercado.</p>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="ronaldo3.png" alt="Produtos Agrícolas">
+          </div>
+          <div class="product-info">
+            <h3>Produtos Agrícolas</h3>
+            <p>Linha completa de soluções para proteger sua lavoura contra pragas e doenças, garantindo o máximo potencial produtivo.</p>
+            <div class="product-cta">
+              <a href="#" class="cta-link">Ver detalhes</a>
+              <a href="#contact" class="btn btn-primary btn-small">Solicitar</a>
             </div>
           </div>
-          <div class="swiper-pagination"></div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="ronaldo2.png" alt="Fertilizantes">
+          </div>
+          <div class="product-info">
+            <h3>Fertilizantes</h3>
+            <p>Fertilizantes de alta performance para solo e foliar, desenvolvidos para fornecer a nutrição ideal e aumentar significativamente a produtividade.</p>
+            <div class="product-cta">
+              <a href="#" class="cta-link">Ver detalhes</a>
+              <a href="#contact" class="btn btn-primary btn-small">Solicitar</a>
+            </div>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img src="ronaldo4.png" alt="Sementes">
+          </div>
+          <div class="product-info">
+            <h3>Sementes</h3>
+            <p>Variedades de alto potencial genético e adaptadas às diferentes regiões e condições climáticas, garantindo o melhor início para sua lavoura.</p>
+            <div class="product-cta">
+              <a href="#" class="cta-link">Ver detalhes</a>
+              <a href="#contact" class="btn btn-primary btn-small">Solicitar</a>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div class="products-controls">
-        <div class="swiper-button swiper-button-prev-products">
-          <i class="fas fa-chevron-left"></i>
-        </div>
-        <div class="swiper-button swiper-button-next-products">
-          <i class="fas fa-chevron-right"></i>
-        </div>
-      </div>
-      
-      <a href="#contact" class="btn btn-secondary btn-large reveal-element" style="margin-top: 40px;">Solicitar Catálogo Completo</a>
+      <a href="#contact" class="btn btn-secondary btn-large" style="margin-top: 40px;">Solicitar Catálogo Completo</a>
     </div>
   </section>
 
-  <!-- Depoimentos (Carrossel) -->
+  <!-- Depoimentos -->
   <section class="testimonials" id="testimonials">
     <div class="container text-center">
-      <h2 class="section-title reveal-element">O Que Nossos Clientes Dizem</h2>
-      <p class="section-subtitle reveal-element">Confira a experiência de agricultores que já utilizam nossos produtos e serviços e transformaram suas produções.</p>
-      
-      <div class="testimonials-slider swiper-container reveal-element">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="testimonial">
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p>"Desde que comecei a utilizar os produtos da Ronaldo Agro, minha produtividade aumentou em mais de 30%. O suporte técnico é excelente e os produtos são de altíssima qualidade."</p>
-              <div class="testimonial-author">
-                <div class="testimonial-avatar">NG</div>
-                <div class="author-info">
-                  <h4>Niltom Garcia Reis</h4>
-                  <p>Produtor de Café - Minas Gerais</p>
-                </div>
-              </div>
-            </div>
+      <h2 class="section-title">O Que Nossos Clientes Dizem</h2>
+      <p class="section-subtitle">Confira a experiência de agricultores que já utilizam nossos produtos e serviços e transformaram suas produções.</p>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
           </div>
-          
-          <div class="swiper-slide">
-            <div class="testimonial">
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p>"A assistência técnica da Ronaldo Agro é incomparável. Eles não apenas vendem produtos, mas acompanham todo o processo e garantem que estamos aplicando da maneira correta para maximizar resultados."</p>
-              <div class="testimonial-author">
-                <div class="testimonial-avatar">JB</div>
-                <div class="author-info">
-                  <h4>João Batista de Oliveira</h4>
-                  <p>Produtor de Café - Minas Gerais</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="swiper-slide">
-            <div class="testimonial">
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star-half-alt"></i>
-              </div>
-              <p>"A entrega rápida e a qualidade dos produtos fizeram toda diferença na minha última safra. Consegui controlar uma praga que estava comprometendo a produção em tempo recorde."</p>
-              <div class="testimonial-author">
-                <div class="testimonial-avatar">AC</div>
-                <div class="author-info">
-                  <h4>Antonio Carlos Bernardes</h4>
-                  <p>Produtor de Café - Minas Gerais</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div class="swiper-slide">
-            <div class="testimonial">
-              <div class="stars">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-              <p>"Trabalho com a Ronaldo Agro há mais de 5 anos e posso garantir que são parceiros confiáveis. Os fertilizantes que eles me recomendaram transformaram minha lavoura e aumentaram minha rentabilidade."</p>
-              <div class="testimonial-author">
-                <div class="testimonial-avatar">MS</div>
-                <div class="author-info">
-                  <h4>Marcos Silva</h4>
-                  <p>Produtor de Soja - Minas Gerais</p>
-                </div>
-              </div>
+          <p>"Desde que comecei a utilizar os produtos da Ronaldo Agro, minha produtividade aumentou em mais de 30%. O suporte técnico é excelente e os produtos são de altíssima qualidade."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4>Niltom Garcia Reis</h4>
+              <p>Produtor de Café - Minas Gerais</p>
             </div>
           </div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="testimonial">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>"A assistência técnica da Ronaldo Agro é incomparável. Eles não apenas vendem produtos, mas acompanham todo o processo e garantem que estamos aplicando da maneira correta para maximizar resultados."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4>João Batista de Oliveira</h4>
+              <p>Produtor de Café - Minas Gerais</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <p>"A entrega rápida e a qualidade dos produtos fizeram toda diferença na minha última safra. Consegui controlar uma praga que estava comprometendo a produção em tempo recorde."</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <h4>Antonio Carlos Bernardes</h4>
+              <p>Produtor de Café - Minas Gerais</p>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <a href="#contact" class="btn btn-primary reveal-element" style="margin-top: 40px;">Seja Nosso Cliente</a>
+      <a href="#contact" class="btn btn-primary" style="margin-top: 40px;">Seja Nosso Cliente</a>
     </div>
   </section>
 
   <!-- FAQ -->
   <section class="faq">
     <div class="container text-center">
-      <h2 class="section-title reveal-element">Perguntas Frequentes</h2>
-      <p class="section-subtitle reveal-element">Tire suas dúvidas sobre nossos produtos e serviços. Se não encontrar o que procura, entre em contato conosco.</p>
-      <div class="accordion reveal-element">
+      <h2 class="section-title">Perguntas Frequentes</h2>
+      <p class="section-subtitle">Tire suas dúvidas sobre nossos produtos e serviços. Se não encontrar o que procura, entre em contato conosco.</p>
+      <div class="accordion">
         <div class="accordion-item">
           <div class="accordion-header">
             <span>Quais regiões vocês atendem?</span>
@@ -1697,16 +1073,16 @@
           </div>
         </div>
       </div>
-      <a href="#contact" class="btn btn-primary reveal-element" style="margin-top: 40px;">Outras Dúvidas? Fale Conosco</a>
+      <a href="#contact" class="btn btn-primary" style="margin-top: 40px;">Outras Dúvidas? Fale Conosco</a>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="cta-section">
     <div class="container text-center">
-      <h2 class="reveal-element">Transforme sua Produção Agrícola</h2>
-      <p class="reveal-element">Conte com a Ronaldo Agro Negócio para fornecer as melhores soluções para sua lavoura. Entre em contato hoje mesmo e descubra como podemos ajudar a aumentar sua produtividade e rentabilidade.</p>
-      <div class="cta-buttons reveal-element">
+      <h2>Transforme sua Produção Agrícola</h2>
+      <p>Conte com a Ronaldo Agro Negócio para fornecer as melhores soluções para sua lavoura. Entre em contato hoje mesmo e descubra como podemos ajudar a aumentar sua produtividade e rentabilidade.</p>
+      <div class="cta-buttons">
         <a href="#contact" class="btn btn-primary btn-large">Solicitar Orçamento</a>
         <a href="https://wa.me/553598708537?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Ronaldo%20Agro%20Negócio" class="btn btn-secondary btn-large" target="_blank">Falar pelo WhatsApp</a>
       </div>
@@ -1717,11 +1093,11 @@
   <section class="contact" id="contact">
     <div class="container">
       <div class="text-center">
-        <h2 class="section-title reveal-element">Entre em Contato</h2>
-        <p class="section-subtitle reveal-element">Preencha o formulário abaixo para falar com nossa equipe ou utilize nossos canais de atendimento direto.</p>
+        <h2 class="section-title">Entre em Contato</h2>
+        <p class="section-subtitle">Preencha o formulário abaixo para falar com nossa equipe ou utilize nossos canais de atendimento direto.</p>
       </div>
       <div class="contact-container">
-        <div class="contact-info reveal-element">
+        <div class="contact-info">
           <h3>Estamos prontos para atender você</h3>
           <p>Nossa equipe de especialistas está disponível para tirar suas dúvidas, oferecer suporte técnico e apresentar as melhores soluções para sua lavoura.</p>
           <p>Visite nossa loja física ou entre em contato através dos nossos canais de atendimento:</p>
@@ -1745,37 +1121,34 @@
           </div>
           <a href="https://wa.me/553598708537?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Ronaldo%20Agro%20Negócio" class="btn btn-secondary" style="margin-top: 20px;" target="_blank">Falar pelo WhatsApp</a>
         </div>
-        <div class="contact-form reveal-element">
+        <div class="contact-form">
           <form id="contact-form">
             <div class="form-group">
-              <input type="text" id="name" name="name" required>
               <label for="name">Nome Completo</label>
+              <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
             </div>
             <div class="form-group">
-              <input type="email" id="email" name="email">
               <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" >
             </div>
+
             <div class="form-group">
-              <input type="tel" id="phone" name="phone" required>
-              <label for="phone">Telefone/WhatsApp</label>
-            </div>
-            <div class="form-group">
+              <label for="interest">Área de Interesse</label>
               <select id="interest" name="interest" required>
-                <option value=""></option>
+                <option value="">Selecione uma opção</option>
                 <option value="Produtos Agrícolas">Produtos Agrícolas</option>
                 <option value="Fertilizantes">Fertilizantes</option>
                 <option value="Assistência Técnica">Assistência Técnica</option>
                 <option value="Outros">Outros</option>
               </select>
-              <label for="interest">Área de Interesse</label>
             </div>
             <div class="form-group">
-              <input type="number" id="area" name="area">
               <label for="area">Tamanho da Área (hectares)</label>
+              <input type="number" id="area" name="area" placeholder="Área aproximada da sua propriedade">
             </div>
             <div class="form-group">
-              <textarea id="message" name="message" rows="5" required></textarea>
               <label for="message">Mensagem</label>
+              <textarea id="message" name="message" rows="5" placeholder="Descreva sua necessidade ou dúvida"></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-large">ENVIAR MENSAGEM</button>
           </form>
@@ -1796,12 +1169,6 @@
         <div class="footer-column">
           <h3>Ronaldo Agro Negócio</h3>
           <p>Soluções completas para o agronegócio brasileiro, com qualidade, tecnologia e suporte técnico especializado.</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
         </div>
         <div class="footer-column">
           <h3>Links Rápidos</h3>
@@ -1832,236 +1199,82 @@
   </footer>
 
   <!-- JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Remover preloader quando a página carregar
-      setTimeout(() => {
-        document.querySelector('.preloader').style.opacity = '0';
-        setTimeout(() => {
-          document.querySelector('.preloader').style.display = 'none';
-        }, 500);
-      }, 1000);
-      
-      // Menu Mobile Toggle
-      const mobileMenuToggle = document.querySelector('.mobile-menu');
-      const mobileNav = document.querySelector('.mobile-nav');
-      const overlay = document.querySelector('.overlay');
-      const body = document.body;
-      
-      mobileMenuToggle.addEventListener('click', () => {
-        mobileNav.classList.toggle('active');
-        overlay.classList.toggle('active');
-        body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-        mobileMenuToggle.innerHTML = mobileNav.classList.contains('active') ? 
-          '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-      });
-      
-      overlay.addEventListener('click', () => {
-        mobileNav.classList.remove('active');
-        overlay.classList.remove('active');
-        body.style.overflow = '';
-        mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-      });
-      
-      document.querySelectorAll('.mobile-nav a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileNav.classList.remove('active');
-          overlay.classList.remove('active');
-          body.style.overflow = '';
-          mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
-        });
-      });
-      
-      // Carrossel de Produtos
-      const productsSwiper = new Swiper('.products-slider', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.products-slider .swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next-products',
-          prevEl: '.swiper-button-prev-products',
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          992: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        }
-      });
-      
-      // Carrossel de Depoimentos
-      const testimonialsSwiper = new Swiper('.testimonials-slider', {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        autoplay: {
-          delay: 6000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.testimonials-slider .swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          992: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        }
-      });
-      
-      // Animação de rolagem suave
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          e.preventDefault();
-          const targetEl = document.querySelector(this.getAttribute('href'));
-          if (targetEl) {
-            const headerHeight = document.querySelector('header').offsetHeight;
-            const targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-            
-            window.scrollTo({
-              top: targetPosition,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-      
-      // Revelar elementos ao scrollar
-      const revealElements = document.querySelectorAll('.reveal-element');
-      
-      function revealOnScroll() {
-        revealElements.forEach(element => {
-          const elementTop = element.getBoundingClientRect().top;
-          const windowHeight = window.innerHeight;
-          if (elementTop < windowHeight - 100) {
-            element.classList.add('active');
-          }
-        });
-      }
-      
-      // Accordion (FAQ)
-      const accordionItems = document.querySelectorAll('.accordion-item');
-      accordionItems.forEach(item => {
-        const header = item.querySelector('.accordion-header');
-        header.addEventListener('click', () => {
-          const activeItem = document.querySelector('.accordion-item.active');
-          if (activeItem && activeItem !== item) {
-            activeItem.classList.remove('active');
-          }
-          item.classList.toggle('active');
-        });
-      });
-      
-      // Scroll to top button
-      const scrollTopBtn = document.querySelector('.scroll-top');
-      
-      window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-          scrollTopBtn.classList.add('active');
-        } else {
-          scrollTopBtn.classList.remove('active');
-        }
-        revealOnScroll();
-      });
-      
-      scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-          top: 0,
+    // Animação de rolagem suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
           behavior: 'smooth'
         });
       });
-      
-      // Inicializar animações ao carregar
-      revealOnScroll();
-      
-      // Redirecionamento do formulário para WhatsApp
-      document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Coleta os valores dos campos do formulário
-        const nome = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const telefone = document.getElementById('phone').value;
-        const areaInteresse = document.getElementById('interest').value;
-        const tamanhoArea = document.getElementById('area').value;
-        const mensagem = document.getElementById('message').value;
-        
-        // Monta a mensagem a ser enviada pelo WhatsApp
-        let texto = "Nome: " + nome + "\n" +
-                    "E-mail: " + email + "\n" +
-                    "Telefone: " + telefone + "\n" +
-                    "Área de Interesse: " + areaInteresse + "\n" +
-                    "Tamanho da Área: " + tamanhoArea + " hectares\n" +
-                    "Mensagem: " + mensagem;
-        
-        // Codifica a mensagem para URL
-        texto = encodeURIComponent(texto);
-        
-        // Redireciona para o WhatsApp com a mensagem pré-preenchida
-        window.open("https://wa.me/553598708537?text=" + texto, "_blank");
-        
-        // Limpa o formulário
-        this.reset();
-        
-        // Exibe mensagem de sucesso
-        const formSuccess = document.createElement('div');
-        formSuccess.className = 'form-success';
-        formSuccess.innerHTML = '<i class="fas fa-check-circle"></i> Mensagem enviada com sucesso!';
-        formSuccess.style.backgroundColor = '#4caf50';
-        formSuccess.style.color = 'white';
-        formSuccess.style.padding = '15px';
-        formSuccess.style.borderRadius = '8px';
-        formSuccess.style.marginTop = '20px';
-        formSuccess.style.textAlign = 'center';
-        
-        this.parentNode.appendChild(formSuccess);
-        
-        setTimeout(() => {
-          formSuccess.remove();
-        }, 5000);
-      });
-      
-      // Animação no hover dos inputs do formulário
-      const formLabels = document.querySelectorAll('.form-group label');
-      
-      formLabels.forEach(label => {
-        const input = document.getElementById(label.getAttribute('for'));
-        if (input) {
-          input.addEventListener('focus', () => {
-            label.classList.add('active');
-          });
-          
-          input.addEventListener('blur', () => {
-            if (!input.value) {
-              label.classList.remove('active');
-            }
-          });
-          
-          // Verificar se o input já tem valor (reload da página)
-          if (input.value) {
-            label.classList.add('active');
-          }
+    });
+
+    // Animação ao scroll para os elementos
+    function revealOnScroll() {
+      const elements = document.querySelectorAll('.benefit-card, .product-card, .testimonial, .section-title');
+      elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (elementTop < windowHeight - 100) {
+          element.style.opacity = 1;
+          element.style.transform = 'translateY(0)';
         }
       });
+    }
+
+    // Inicializar elementos com opacidade 0
+    document.querySelectorAll('.benefit-card, .product-card, .testimonial, .section-title').forEach(element => {
+      element.style.opacity = 0;
+      element.style.transform = 'translateY(30px)';
+      element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
+
+    // Accordion (FAQ)
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    accordionItems.forEach(item => {
+      const header = item.querySelector('.accordion-header');
+      header.addEventListener('click', () => {
+        const activeItem = document.querySelector('.accordion-item.active');
+        if (activeItem && activeItem !== item) {
+          activeItem.classList.remove('active');
+        }
+        item.classList.toggle('active');
+      });
+    });
+
+    // Redirecionamento do formulário para WhatsApp
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Coleta os valores dos campos do formulário
+      var nome = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var telefone = document.getElementById('phone').value;
+      var areaInteresse = document.getElementById('interest').value;
+      var tamanhoArea = document.getElementById('area').value;
+      var mensagem = document.getElementById('message').value;
+
+      // Monta a mensagem a ser enviada pelo WhatsApp
+      var texto = "Nome: " + nome + "\n" +
+                  "E-mail: " + email + "\n" +
+                  "Telefone: " + telefone + "\n" +
+                  "Área de Interesse: " + areaInteresse + "\n" +
+                  "Tamanho da Área: " + tamanhoArea + "\n" +
+                  "Mensagem: " + mensagem;
+
+      // Codifica a mensagem para URL
+      texto = encodeURIComponent(texto);
+
+      // Redireciona para o WhatsApp com a mensagem pré-preenchida
+      window.open("https://wa.me/553598708537?text=" + texto, "_blank");
+    });
+
+    // Executar funções ao carregar
+    window.addEventListener('load', () => {
+      revealOnScroll();
+    });
+    window.addEventListener('scroll', revealOnScroll);
   </script>
 </body>
 </html>
